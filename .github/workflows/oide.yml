@@ -13,10 +13,11 @@ jobs:
   pull:
     permissions:
       contents: read
-    uses: iwamot/workflows/.github/workflows/oide.yml@873e99243e0ab9f834bb4eb42198f701bfe5c21c # v8.4.0
+    uses: iwamot/workflows/.github/workflows/oide.yml@45ef58fbb304855f7201a3d2c5d8f892934e533e # v8.9.0
     with:
-      # renovate: datasource=github-tags depName=iwamot/repo-template
-      TEMPLATE_VERSION: v1.8.0
+      SOURCES: |
+        # renovate: datasource=github-tags depName=iwamot/repo-template
+        iwamot/repo-template@v1.10.0
     secrets:
       OIDE_APP_CLIENT_ID: ${{ secrets.OIDE_APP_CLIENT_ID }}
       OIDE_APP_PRIVATE_KEY: ${{ secrets.OIDE_APP_PRIVATE_KEY }}
